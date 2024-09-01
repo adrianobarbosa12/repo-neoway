@@ -23,7 +23,7 @@ sources:
         description: "Descreve as empresas sobre a data de abertira, cnae, ramo, setor, etc..."
         external:
           location: 'gs://arquivos-base-meoway/df_empresas.csv'
-      - name: bq-results-20240515-184938-1715799987947
+      - name: f_processos_juridicos
         description: "Base dos processos juridicos"
         external:
           location: 'gs://arquivos-base-meoway/bq-results-20240515-184938-1715799987947.json'
