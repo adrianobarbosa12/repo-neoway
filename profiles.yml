@@ -1,0 +1,12 @@
+resolucao_neoway:
+  target: dev
+  outputs:
+    dev:
+      type: bigquery
+      method: service-account
+      project: resolucao-neoway
+      dataset: reso_neoway
+      threads: 1
+      timeout_seconds: 300
+      location: US
+      keyfile: C:\\Users\\adriano.barbosa\\repo-neoway\\resolucao-neoway-4b2cffc91624.json

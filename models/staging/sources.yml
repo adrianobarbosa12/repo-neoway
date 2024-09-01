@@ -1,0 +1,29 @@
+version: 2
+
+sources:
+  - name: reso_neoway_reso_neoway
+    tables:
+      - name: empresas_simples
+        description: "Dados sobre as empresas optantes pelo simples ou simei"
+        external:
+          location: 'gs://arquivos-base-meoway/empresas_simples.csv'
+      - name: empresas_saude_tributaria
+        description: "Descreve a saude tributaria da empresa"
+        external:
+          location: 'gs://arquivos-base-meoway/empresas_saude_tributaria.csv'
+      - name: empresas_porte
+        description: "Descreve o porte das empresas "
+        external:
+          location: 'gs://arquivos-base-meoway/empresas_porte.csv'
+      - name: empresas_nivel_atividade
+        description: "Descreve o nivel de atividade das empresas"
+        external:
+          location: 'gs://arquivos-base-meoway/empresas_nivel_atividade.csv'
+      - name: df_empresas
+        description: "Descreve as empresas sobre a data de abertira, cnae, ramo, setor, etc..."
+        external:
+          location: 'gs://arquivos-base-meoway/df_empresas.csv'
+      - name: bq-results-20240515-184938-1715799987947
+        description: "Base dos processos juridicos"
+        external:
+          location: 'gs://arquivos-base-meoway/bq-results-20240515-184938-1715799987947.json'

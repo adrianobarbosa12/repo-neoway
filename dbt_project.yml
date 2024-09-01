@@ -1,0 +1,24 @@
+name: 'resolucao_neoway'
+version: '1.0'
+config-version: 2
+
+model-paths: ["models"]
+
+profile: 'resolucao_neoway'
+
+models:
+  resolucao_neoway:
+    +materialized: view  
+    +schema: reso_neoway_reso_neoway 
+
+seeds:
+  resolucao_neoway:
+    +schema: reso_neoway_reso_neoway
+
+snapshots:
+  resolucao_neoway:
+    +schema: reso_neoway_reso_neoway 
+
+data_tests:
+  resolucao_neoway:
+    +schema: reso_neoway_reso_neoway 
