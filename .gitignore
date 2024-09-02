@@ -1,4 +1,6 @@
 logs/ 
 resolucao-neoway-4b2cffc91624.json
 target/
-.vscode
+.vscode/
+.user.yml
+
