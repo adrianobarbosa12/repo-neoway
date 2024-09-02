@@ -30,15 +30,11 @@ select
     (select codigoCNJ from unnest(assuntosCNJ) limit 1) as codigo_CNJ,
     (select codigoLocal from unnest(assuntosCNJ) limit 1) as codigo_local,
     (select titulo from unnest(assuntosCNJ) limit 1) as titulo,
-    string_agg(partes.nomeNormalizadoNeoway, ', ') as nome_normalizado_neoway,
-    string_agg(partes.polo, ', ') as polo,
+    partes.nomeNormalizadoNeoway as nome_normalizado_neoway,
+    partes.polo as polo,
     replace(format('%.2f', valorCausa), '.', ',') as valor_causa,
     replace(format('%.2f', valorPredicaoCondenacao), '.', ',') as valor_predicao_condenacao,
     unidadeOrigem as unidade_origem,
     juiz
 from ajustando_f_processos_juridicos,
 unnest(partes) as partes
-
-group by 
-cnpj, area, grauProcesso, comarca, julgamento, dataDecisao, dataEncerramento,
-uf, tribunal, ultimoEstado, orgaoJulgador, citacaoTipo, unidadeOrigem, juiz, assuntosCNJ, valorCausa, valorPredicaoCondenacao
