@@ -1,37 +1,37 @@
- # Contexto
+ # Context
 
- Esse projeto consiste em realizar a analise de dados de processos jurídicos de empresas brasileiras através de bases de dados disponíveis em formatos `.CSV` e `.Json`. Essas bases passaram por uma série de tratamentos para que os dados sejam refletidos em dashboard para a melhor tomada de decisão.
+This project involves analyzing legal process data from Brazilian companies using datasets available in `.CSV` and `.JSON` formats. These datasets have undergone various transformations to be visualized on a dashboard for better decision-making.
 
- Para o desenvolvimento desse projeto foram utilizadas as ferramentas: 
-- `DBT` para transformação de dados (Processos de ETL)
-- `SQL` para gerenciamento e manipulação dos dados
-- `Power BI` para criação de dashboard
-- `BigQuery` como data warehouse
+The following tools were used for the development of this project:
+- `DBT` for data transformation (ETL processes)
+- `SQL` for data management and manipulation
+- `Power BI` for dashboard creation
+- `BigQuery` as the data warehouse
 
-Português | [Inglês](./README-en_US.md)
+[Portuguese](./README.md]) | English
 
 # QuickStart
-## Instalação de pacotes e dependências
+## Installing Packages and Dependencies
 
-Será necessária a instalação do Python versão 3 em diante.
-[Link de instalação](https://www.python.org/downloads/)
+You will need to install Python version 3 or later
+[Installation Link](https://www.python.org/downloads/)
 
-Instalação da dependência dbt-bigquery
+Install the dbt-bigquery dependency:
 ```bash
 $ pip install dbt-bigquery
-```
+``` 
 
 :warning: 
-Atenção! Antes de executar o projeto, deverá inserir as credenciais enviadas no [Time Secret](https://onetimesecret.com/secret/4787trnegpnwxaarsxbt1f0kjv3e94f) no arquivo [credentials.json](./credentials.json). Utilizar senha de acesso enviada por e-mail. :warning:
+Important! Before running the project, you must insert the credentials sent to you in the [Time Secret](https://onetimesecret.com/secret/4787trnegpnwxaarsxbt1f0kjv3e94f) into the [credentials.json](./credentials.json) file. Use the access password sent via email. :warning:
 
-Para executar o projeto  
+To run the project: 
 ```bash
 $ dbt run 
 ```
 
-Este comando irá ler os dados que estão armazenados em um dataset em nuvem, fará o tratamento dos dados gerando as views que serão consumidas pelo dashboard.
+This command will read the data stored in a cloud dataset, process the data, and generate the views that will be consumed by the dashboard.
 
-Mensagem de sucesso ao executar o projeto: 
+Success message upon running the project:
 ```bash
 1 of 6 START sql view model reso_neoway_reso_neoway_reso_neoway.df_empresas .... [RUN]
 1 of 6 OK created sql view model reso_neoway_reso_neoway_reso_neoway.df_empresas  [CREATE VIEW (0 processed) in 2.24s]
@@ -51,8 +51,8 @@ Finished running 6 view models in 0 hours 0 minutes and 17.14 seconds (17.14s).
 Completed successfully
 ```
 
-# Executando o projeto com Docker
-Para executar o projeto com docker deverá executar o comando
+# Running the Project with Docker
+To run the project using Docker, execute the following command:
 ```bash
 $ docker-compose up
 ```
