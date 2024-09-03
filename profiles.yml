@@ -9,4 +9,4 @@ resolucao_neoway:
       threads: 1
       timeout_seconds: 300
       location: US
-      keyfile: resolucao-neoway-4b2cffc91624.json
+      keyfile: credentials.json

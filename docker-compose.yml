@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  dbt:
+    build: .
+    volumes:
+      - .:/usr/app
+      
+      - ./credentials.json:/root/.google/credentials.json
+    environment:
+      GOOGLE_APPLICATION_CREDENTIALS: "/root/.google/credentials.json"
+    
+    command: ["run"]
